@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          sympauthy:
+            client-name: SympAuthy
+            client-id: example
+            client-secret: my-example-secret
+            provider: sympauthy
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/sympauthy
+        provider:
+          sympauthy:
+            authorization-uri: http://localhost:8092/api/oauth2/authorize
+            token-uri: http://localhost:8092/api/oauth2/token
